@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.YourSnitch" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/ys_accent</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">@color/ys_bg1</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/ys_bg1</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.YourSnitch.Splash" parent="Theme.YourSnitch">
+        <item name="android:windowBackground">@color/ys_bg1</item>
+    </style>
+
+    <!-- legacy theme name kept so nothing else breaks -->
+    <style name="Theme.CameraWatch" parent="Theme.YourSnitch" />
+</resources>

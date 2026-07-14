@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:minHeight="62dp"
+    android:background="@drawable/glass_card_sm"
+    android:clipToOutline="true">
+
+    <View
+        android:id="@+id/accent"
+        android:layout_width="3dp"
+        android:layout_height="62dp"
+        android:background="@color/ys_amber" />
+
+    <FrameLayout
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/icon_chip">
+
+        <ImageView
+            android:id="@+id/iconImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_tab_camera"
+            android:contentDescription="@null" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        android:paddingVertical="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk"
+                android:fontVariationSettings="'wght' 600"
+                android:text="App"
+                android:textColor="@color/ys_text"
+                android:textSize="14.5sp" />
+
+            <View
+                android:id="@+id/liveDot"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/dot"
+                android:backgroundTint="@color/ys_amber"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Started using the camera"
+            android:textColor="@color/ys_text2"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:fontFamily="@font/ibm_plex_mono_medium"
+        android:text="now"
+        android:textColor="@color/ys_text3"
+        android:textSize="11.5sp" />
+</LinearLayout>

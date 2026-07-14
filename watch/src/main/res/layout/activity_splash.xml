@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_nebula">
+
+    <com.privacy.camerawatch.AuroraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <View
+                android:id="@+id/ring1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ring_stroke" />
+
+            <View
+                android:id="@+id/ring2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ring_stroke" />
+
+            <com.privacy.camerawatch.SnitchMarkView
+                android:layout_width="118dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/wordmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/space_grotesk"
+            android:fontVariationSettings="'wght' 700"
+            android:text="YourSnitch"
+            android:textColor="@color/ys_text"
+            android:textSize="34sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/space_grotesk"
+            android:fontVariationSettings="'wght' 500"
+            android:text="Your Mic &amp; Camera Snitcher"
+            android:textColor="#c3ccdd"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:fontFamily="@font/ibm_plex_mono_medium"
+            android:text="Does not detect root-level or\nmanufacturer (OEM) listening."
+            android:textColor="@color/ys_text3"
+            android:textSize="11sp"
+            android:lineSpacingMultiplier="1.4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="3dp"
+            android:background="#1AFFFFFF">
+
+            <View
+                android:id="@+id/loadFill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_accent"
+                android:scaleX="0"
+                android:transformPivotX="0dp" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/ibm_plex_mono_medium"
+            android:letterSpacing="0.22"
+            android:text="INITIALIZING SECURE MONITOR"
+            android:textColor="@color/ys_text3"
+            android:textSize="10sp" />
+    </LinearLayout>
+</FrameLayout>

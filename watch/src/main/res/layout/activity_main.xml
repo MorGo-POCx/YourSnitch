@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_nebula">
+
+    <com.privacy.camerawatch.AuroraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- ================= HOME ================= -->
+            <ScrollView
+                android:id="@+id/homeView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/wordmarkRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="6dp">
+
+                        <TextView
+                            android:id="@+id/homeWordmark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/space_grotesk"
+                            android:fontVariationSettings="'wght' 700"
+                            android:text="YourSnitch"
+                            android:textColor="@color/ys_text"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/ibm_plex_mono_medium"
+                            android:text="mic &amp; camera snitcher"
+                            android:textColor="@color/ys_text2"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- status hero -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/glass_card"
+                        android:clipChildren="true"
+                        android:clipToOutline="true">
+
+                        <View
+                            android:id="@+id/shimmer"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:background="#14FFFFFF" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="18dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <com.privacy.camerawatch.SnitchMarkView
+                                    android:layout_width="46dp"
+                                    android:layout_height="50dp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="14dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:gravity="center_vertical">
+
+                                        <View
+                                            android:id="@+id/statusDot"
+                                            android:layout_width="8dp"
+                                            android:layout_height="8dp"
+                                            android:layout_marginEnd="7dp"
+                                            android:background="@drawable/dot"
+                                            android:backgroundTint="@color/ys_green" />
+
+                                        <TextView
+                                            android:id="@+id/statusLabel"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/ibm_plex_mono_medium"
+                                            android:letterSpacing="0.16"
+                                            android:text="PROTECTED"
+                                            android:textColor="@color/ys_green"
+                                            android:textSize="11sp" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/statusTitle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:fontFamily="@font/space_grotesk"
+                                        android:fontVariationSettings="'wght' 600"
+                                        android:text="Monitoring active"
+                                        android:textColor="@color/ys_text"
+                                        android:textSize="18sp" />
+
+                                    <TextView
+                                        android:id="@+id/statusSub"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Watching camera &amp; mic in real time"
+                                        android:textColor="@color/ys_text2"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="14dp"
+                                android:background="@drawable/glass_inset"
+                                android:padding="11dp">
+
+                                <TextView
+                                    android:id="@+id/marquee"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="true"
+                                    android:scrollHorizontally="true"
+                                    android:fontFamily="@font/ibm_plex_mono_medium"
+                                    android:text="Monitoring…"
+                                    android:textColor="@color/ys_accent2"
+                                    android:textSize="12sp" />
+                            </FrameLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/toggleBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/btn_accent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:fontFamily="@font/space_grotesk"
+                        android:fontVariationSettings="'wght' 600"
+                        android:text="Stop monitoring"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/homeConnBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/glass_card_sm"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:fontFamily="@font/space_grotesk"
+                        android:textStyle="bold"
+                        android:text="🌐  Monitor connections too  →"
+                        android:textColor="@color/ys_accent2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/ibm_plex_mono_medium"
+                        android:letterSpacing="0.2"
+                        android:text="TODAY"
+                        android:textColor="@color/ys_text3"
+                        android:textSize="10sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <LinearLayout style="@style/YsStatCard">
+                            <TextView style="@style/YsStatVal" android:id="@+id/statCam" android:text="0" />
+                            <TextView style="@style/YsStatLabel" android:text="Camera" />
+                        </LinearLayout>
+
+                        <View android:layout_width="9dp" android:layout_height="1dp" />
+
+                        <LinearLayout style="@style/YsStatCard">
+                            <TextView style="@style/YsStatVal" android:id="@+id/statMic" android:text="0" />
+                            <TextView style="@style/YsStatLabel" android:text="Microphone" />
+                        </LinearLayout>
+
+                        <View android:layout_width="9dp" android:layout_height="1dp" />
+
+                        <LinearLayout style="@style/YsStatCard">
+                            <TextView style="@style/YsStatVal" android:id="@+id/statApps" android:text="0" />
+                            <TextView style="@style/YsStatLabel" android:text="Apps" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/ibm_plex_mono_medium"
+                        android:letterSpacing="0.2"
+                        android:text="RECENT ACCESS"
+                        android:textColor="@color/ys_text3"
+                        android:textSize="10sp" />
+
+                    <LinearLayout
+                        android:id="@+id/recentList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/recentEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="10dp"
+                        android:text="No access recorded yet."
+                        android:textColor="@color/ys_text3"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- ================= CAMERA ================= -->
+            <FrameLayout
+                android:id="@+id/cameraView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="16dp">
+                            <com.privacy.camerawatch.SnitchMarkView
+                                android:layout_width="28dp"
+                                android:layout_height="30dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/space_grotesk"
+                                android:fontVariationSettings="'wght' 700"
+                                android:text="Camera activity"
+                                android:textColor="@color/ys_text"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/camBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/amber_banner"
+                            android:padding="12dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/camBannerText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1 app is using your camera now"
+                                android:textColor="#f3d7a0"
+                                android:textSize="12.5sp" />
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/dot"
+                                android:backgroundTint="@color/ys_amber" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cameraList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:id="@+id/cameraEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingVertical="60dp"
+                            android:text="No camera activity yet"
+                            android:textColor="@color/ys_text3"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </ScrollView>
+            </FrameLayout>
+
+            <!-- ================= MIC ================= -->
+            <FrameLayout
+                android:id="@+id/micView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="16dp">
+                            <com.privacy.camerawatch.SnitchMarkView
+                                android:layout_width="28dp"
+                                android:layout_height="30dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/space_grotesk"
+                                android:fontVariationSettings="'wght' 700"
+                                android:text="Microphone activity"
+                                android:textColor="@color/ys_text"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/micActiveCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/glass_card_sm"
+                            android:padding="14dp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="11dp">
+
+                                <TextView
+                                    android:id="@+id/micActiveText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/space_grotesk"
+                                    android:fontVariationSettings="'wght' 600"
+                                    android:text="Voice Recorder is listening"
+                                    android:textColor="@color/ys_text"
+                                    android:textSize="13.5sp" />
+
+                                <View
+                                    android:layout_width="8dp"
+                                    android:layout_height="8dp"
+                                    android:background="@drawable/dot"
+                                    android:backgroundTint="@color/ys_amber" />
+                            </LinearLayout>
+
+                            <com.privacy.camerawatch.WaveformView
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/micList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:id="@+id/micEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingVertical="60dp"
+                            android:text="No microphone activity yet"
+                            android:textColor="@color/ys_text3"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </ScrollView>
+            </FrameLayout>
+
+            <!-- ================= SETTINGS ================= -->
+            <ScrollView
+                android:id="@+id/settingsView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+                        <com.privacy.camerawatch.SnitchMarkView
+                            android:layout_width="28dp"
+                            android:layout_height="30dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/space_grotesk"
+                            android:fontVariationSettings="'wght' 700"
+                            android:text="Settings"
+                            android:textColor="@color/ys_text"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/glass_card"
+                        android:paddingHorizontal="16dp">
+
+                        <LinearLayout style="@style/YsToggleRow">
+                            <LinearLayout style="@style/YsToggleLabel">
+                                <TextView style="@style/YsToggleTitle" android:text="Start automatically on boot" />
+                                <TextView style="@style/YsToggleSub" android:text="Begin monitoring when the phone restarts" />
+                            </LinearLayout>
+                            <FrameLayout android:id="@+id/bootTrack" style="@style/YsTrack">
+                                <View android:id="@+id/bootKnob" style="@style/YsKnob" />
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <View style="@style/YsRowDivider" />
+
+                        <LinearLayout style="@style/YsToggleRow">
+                            <LinearLayout style="@style/YsToggleLabel">
+                                <TextView style="@style/YsToggleTitle" android:text="Show camera use" />
+                                <TextView style="@style/YsToggleSub" android:text="Name the app in the notification when the camera is in use" />
+                            </LinearLayout>
+                            <FrameLayout android:id="@+id/camTrack" style="@style/YsTrack">
+                                <View android:id="@+id/camKnob" style="@style/YsKnob" />
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <View style="@style/YsRowDivider" />
+
+                        <LinearLayout style="@style/YsToggleRow">
+                            <LinearLayout style="@style/YsToggleLabel">
+                                <TextView style="@style/YsToggleTitle" android:text="Show microphone use" />
+                                <TextView style="@style/YsToggleSub" android:text="Name the app in the notification when the mic is in use" />
+                            </LinearLayout>
+                            <FrameLayout android:id="@+id/micTrack" style="@style/YsTrack">
+                                <View android:id="@+id/micKnob" style="@style/YsKnob" />
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/countryAlertBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/glass_card_sm"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:fontFamily="@font/space_grotesk"
+                        android:textStyle="bold"
+                        android:text="Country alerts: off"
+                        android:textColor="@color/ys_accent2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/keepBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btn_accent"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:fontFamily="@font/space_grotesk"
+                        android:textStyle="bold"
+                        android:text="Keep running in background"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/usageBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/glass_card_sm"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:fontFamily="@font/space_grotesk"
+                        android:fontVariationSettings="'wght' 600"
+                        android:text="⚠  Grant Usage Access to name apps"
+                        android:textColor="@color/ys_accent2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/clearBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/glass_card_sm"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:fontFamily="@font/space_grotesk"
+                        android:fontVariationSettings="'wght' 600"
+                        android:text="Clear history"
+                        android:textColor="@color/ys_accent2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="To keep monitoring when the app is closed, especially on Xiaomi / MIUI: tap “Keep running in background” above, then in Security / Settings enable Autostart for YourSnitch, set its battery usage to “No restrictions”, and lock it in Recents. Otherwise the system may stop monitoring in the background."
+                        android:textColor="@color/ys_text3"
+                        android:textSize="11.5sp"
+                        android:lineSpacingMultiplier="1.5" />
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- ================= ADVANCED ================= -->
+            <ScrollView
+                android:id="@+id/advancedView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="4dp">
+                        <com.privacy.camerawatch.SnitchMarkView
+                            android:layout_width="28dp"
+                            android:layout_height="30dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/space_grotesk"
+                            android:textStyle="bold"
+                            android:text="App Activity"
+                            android:textColor="@color/ys_text"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:text="Which apps used the camera or mic, and how many times."
+                        android:textColor="@color/ys_text2"
+                        android:textSize="12.5sp" />
+
+                    <LinearLayout
+                        android:id="@+id/advancedList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/advancedEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="60dp"
+                        android:text="No app activity yet"
+                        android:textColor="@color/ys_text3"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- ================= CONNECTIONS ================= -->
+            <LinearLayout
+                android:id="@+id/connectionsView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <com.privacy.camerawatch.SnitchMarkView
+                        android:layout_width="28dp"
+                        android:layout_height="30dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/space_grotesk"
+                        android:textStyle="bold"
+                        android:text="Connections"
+                        android:textColor="@color/ys_text"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/connToggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/btn_amber"
+                    android:gravity="center"
+                    android:padding="14dp"
+                    android:fontFamily="@font/space_grotesk"
+                    android:textStyle="bold"
+                    android:text="Start connection monitor"
+                    android:textColor="#1a1205"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Uses a local VPN to read the domains your apps look up (a key icon appears in the status bar). It sees names &amp; countries only — never content — and routes only DNS, so your browsing is unaffected."
+                    android:textColor="@color/ys_text3"
+                    android:textSize="11sp"
+                    android:lineSpacingMultiplier="1.35" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/glass_card_sm"
+                    android:padding="4dp">
+                    <TextView android:id="@+id/subFlow" style="@style/YsSeg" android:text="Flow" />
+                    <TextView android:id="@+id/subCountries" style="@style/YsSeg" android:text="Countries" />
+                    <TextView android:id="@+id/subServers" style="@style/YsSeg" android:text="Servers" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="14dp">
+
+                    <FrameLayout
+                        android:id="@+id/connFlowView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none">
+                            <LinearLayout
+                                android:id="@+id/connFlowList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </ScrollView>
+                        <TextView
+                            android:id="@+id/connFlowEmpty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="No connections captured yet.\nStart the monitor and use an app."
+                            android:textColor="@color/ys_text3"
+                            android:textSize="14sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/connCountriesView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none">
+                            <LinearLayout
+                                android:id="@+id/connCountriesList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </ScrollView>
+                        <TextView
+                            android:id="@+id/connCountriesEmpty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="No countries yet"
+                            android:textColor="@color/ys_text3"
+                            android:textSize="14sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/connServersView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none">
+                            <LinearLayout
+                                android:id="@+id/connServersList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </ScrollView>
+                        <TextView
+                            android:id="@+id/connServersEmpty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="No servers yet"
+                            android:textColor="@color/ys_text3"
+                            android:textSize="14sp" />
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <!-- © watermark: fixed top-right, visible on every tab -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="14dp"
+                android:fontFamily="@font/ibm_plex_mono_medium"
+                android:text="© 2026 Mor Golan"
+                android:textColor="@color/ys_text3"
+                android:textSize="10sp"
+                android:alpha="0.75" />
+        </FrameLayout>
+
+        <!-- bottom nav (populated in code) -->
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#8C0a0c14"
+            android:paddingVertical="8dp" />
+    </LinearLayout>
+</FrameLayout>

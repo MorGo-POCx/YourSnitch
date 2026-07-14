@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark, rounded dialog matching the Nebula theme (permission pop-ups, clear-history, etc.) -->
+    <style name="YsDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/ys_bg2</item>
+        <item name="colorSurfaceContainerHigh">@color/ys_bg2</item>
+        <item name="colorOnSurface">@color/ys_text</item>
+        <item name="colorOnSurfaceVariant">@color/ys_text2</item>
+        <item name="colorPrimary">@color/ys_accent2</item>
+        <item name="android:textColorPrimary">@color/ys_text</item>
+        <item name="android:textColorSecondary">@color/ys_text2</item>
+        <item name="shapeAppearanceMediumComponent">@style/YsDialogShape</item>
+    </style>
+    <style name="YsDialogShape" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="YsStatCard">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/glass_card_sm</item>
+        <item name="android:paddingHorizontal">11dp</item>
+        <item name="android:paddingVertical">13dp</item>
+    </style>
+
+    <style name="YsStatVal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/space_grotesk</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ys_text</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="YsStatLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/ys_text2</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="YsToggleRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingVertical">16dp</item>
+    </style>
+
+    <style name="YsToggleLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <style name="YsToggleTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/space_grotesk</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ys_text</item>
+        <item name="android:textSize">14.5sp</item>
+    </style>
+
+    <style name="YsToggleSub">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textColor">@color/ys_text2</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="YsTrack">
+        <item name="android:layout_width">46dp</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:background">@drawable/toggle_track</item>
+    </style>
+
+    <style name="YsKnob">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">center_vertical|start</item>
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:background">@drawable/toggle_knob</item>
+    </style>
+
+    <style name="YsSeg">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingVertical">9dp</item>
+        <item name="android:fontFamily">@font/space_grotesk</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ys_text2</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="YsRowDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#12FFFFFF</item>
+    </style>
+</resources>

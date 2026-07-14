@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nebula palette -->
+    <color name="ys_accent">#5b7cfa</color>
+    <color name="ys_accent2">#8ea6ff</color>
+    <color name="ys_glow">#8C5b7cfa</color>
+    <color name="ys_bg1">#06080f</color>
+    <color name="ys_bg2">#0e1130</color>
+    <color name="ys_aur1">#8C3b56f6</color>
+    <color name="ys_aur2">#802563eb</color>
+    <color name="ys_aur3">#527c5cf6</color>
+    <color name="ys_nav_tint">#335b7cfa</color>
+
+    <color name="ys_green">#22c55e</color>
+    <color name="ys_green2">#16a34a</color>
+    <color name="ys_red">#ef4444</color>
+    <color name="ys_amber">#f59e0b</color>
+    <color name="ys_amber2">#fbbf24</color>
+
+    <color name="ys_text">#eef2fa</color>
+    <color name="ys_text2">#8b94a8</color>
+    <color name="ys_text3">#6b7488</color>
+
+    <color name="ys_glass">#0DFFFFFF</color>
+    <color name="ys_glass_border">#17FFFFFF</color>
+    <color name="ys_glass2">#0BFFFFFF</color>
+    <color name="ys_inset">#4D000000</color>
+
+    <!-- legacy names still referenced by older code paths -->
+    <color name="cw_primary">#5b7cfa</color>
+    <color name="cw_on_primary">#FFFFFF</color>
+    <color name="cw_camera">#5b7cfa</color>
+    <color name="cw_mic">#f59e0b</color>
+    <color name="cw_ok">#22c55e</color>
+    <color name="cw_off">#6b7488</color>
+</resources>
