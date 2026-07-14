@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/MorGo-POCx/YourSnitch/blob/main/banner.png?raw=true" width="100%" alt="YourSnitch">
+</p>
 # YourSnitch
 
 YourSnitch is an on-device privacy monitor for Android. It tells you **when your camera or
