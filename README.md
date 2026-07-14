@@ -101,4 +101,16 @@ collected or transmitted to the developer.
   derived from the [ip-location-db](https://github.com/sapics/ip-location-db) project
   (`geo-whois-asn-country`).
 
+
+<h2 align="center">🎬 Demo Video</h2>
+
+<p align="center">
+  <a href="https://www.youtube.com/shorts/ZUR8eMDsvbg">
+    <img
+      src="https://img.youtube.com/vi/ZUR8eMDsvbg/hqdefault.jpg"
+      width="350"
+      alt="Watch the demo video">
+  </a>
+</p>
+
 © 2026 Mor Golan
